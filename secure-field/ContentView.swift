@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var password = ""
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        SecureField("Password", text: $password){
+//            Fires this block when user presses return
+        }
+//        TextFieldStyle...
+        .textFieldStyle(RoundedBorderTextFieldStyle)
     }
 }
 
